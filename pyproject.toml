@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "pasteprime"
+version = "0.1.0"
+description = "Tool to paste the clipboard one letter at a time."
+authors = ["Luna <60011425+akshualy@users.noreply.github.com>"]
+package-mode = false
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+pyclip = "^0.7.0"
+pillow = "^11.1.0"
+pystray = "^0.19.5"
+pynput = "^1.7.7"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^6.0.0"
+flake8 = "^7.1.1"
+black = "^25.1.0"
+pyinstaller = "^6.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+extend-exclude = '''
+(
+    \.idea
+    | pyproject.toml
+)
+'''
