@@ -1,6 +1,7 @@
 """
 Module to handle the program being written into the Windows autostart.
 """
+
 import logging
 import sys
 import winreg
